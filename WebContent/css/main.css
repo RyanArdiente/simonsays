@@ -1,0 +1,166 @@
+#outerContainer{
+  width: 75em;
+  height: 50em;
+  margin: 0 auto;
+  display: flex;
+}
+#container2{
+  background-color: orange;
+  height: 37.5em;
+  width: 50em;
+  display: inline-flex;
+  /*margin: 0 auto;*/
+}
+#container3{
+  background-color: lightblue;
+  height: 12.5em;
+  width: 50em;
+  display: inline-block;
+}
+#boxer{
+
+}
+#gameBoard{
+  height: 35em;
+  width: 45em;
+  margin: 0 auto;
+  margin-top: 1.25em;
+
+  background-color: purple;
+  display: inline-block;
+  float:right;
+  z-index: 1;
+}
+#container1{
+  font-size: 2em;
+  height: 25em;
+  width:  12.5em;
+  background-color: black;
+  color: white;
+
+}
+#scoreTable{
+  margin: 0 auto;
+  height: 25em;
+  width:  12.5em;
+  align-content: center;
+  float:left;
+  z-index: 1;
+  text-align: center;
+
+}
+#scoreBoard{
+  background-color: pink;
+  height: 12.5em;
+  width: 50em;
+  margin: 0 auto;
+font-size: 1em;
+
+}
+
+#simon{
+
+}
+.redOn{
+  background-color: #ff0000;
+}
+.redOff{
+  background-color: #4d0000;
+}
+.blueOn{
+  background-color: #00ffff;
+}
+.blueOff{
+  background-color: #00004d;
+}
+.greenOn{
+  background-color: #80ff00;
+}
+.greenOff{
+    background-color: #0f3d0f;
+}
+.yellowOn{
+  background-color: #ffff00;
+}
+.yellowOff{
+  background-color: #4d4d00;
+}
+#red {
+
+    height: 15em;
+    width: 45.65%;
+    border-top-right-radius: 100%;
+    float: right;
+    /*position: relative;
+    left: 62%;
+    top: 10%;*/
+    border: 1em solid black;
+}
+#yellow {
+  /*position: relative;
+  bottom: 81.25%;
+  left:26.5%;*/
+
+  float: left;
+  height: 15em;
+  width: 45.65%;
+  border-bottom-left-radius: 100%;
+  border: 1em solid black;
+
+}
+#blue {
+  /*position: relative;
+
+  left: 62%;
+  top: 10%;*/
+  float: right;
+
+  height: 15em;
+  width: 45.65%;
+  border-bottom-right-radius: 100%;
+  border: 1em solid black;
+
+}
+#green {
+  /*position: relative;
+
+  bottom: 83%;
+  left:26.5%;*/
+  float: left;
+  height: 15em;
+  width: 45.65%;
+  border-top-left-radius: 100%;
+  border: 1em solid black;
+
+
+}
+#clock{
+  font-size: 1em;
+
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: Impact, Charcoal, sans-serif;
+  display: inline-flex;;
+}
+#Score{
+  display: inline-block;
+  margin: 0 auto;
+  width: 45%;
+  height: 20px;
+}
+#Seconds{
+  display: inline-block;
+  margin: 0 auto;
+width: 45%;
+  height: 20px;
+
+}
+#Round{
+
+}
+#button{
+  width: 50%
+}
