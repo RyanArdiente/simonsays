@@ -14,21 +14,36 @@ function createGameBoard(){
   simon.appendChild(blue);
   var yellow = document.createElement("div");
   yellow.setAttribute("id", "yellow");
-  yellow.setAttribute("class", "yellowOff")
+  yellow.setAttribute("class", "yellowOff");
   simon.appendChild(yellow);
+  clock.style.textShadow ="0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff9900 , 0 0 70px #ff0000 , 0 0 80px #ff0000 , 0 0 100px #ff9900";
+  clock.style.backgroundColor = "black";
+  clock.style.color = "white";
+}
+function off(){
+   green.setAttribute("class","greenOff");
+   red.setAttribute("class","redOff");
+   blue.setAttribute("class","blueOff");
+   yellow.setAttribute("class","yellowOff");
+   // yellowaudio.pause();
+   // redaudio.pause();
+   // greenaudio.pause();
+   // blueaudio.pause();
 
 }
 
 function play(){
   simon.innerHTML="";
-  var h3 = document.createElement("h3");
-  h3.innerHTML="Let's play simon!";
-  simon.appendChild(h3);
-  var input = document.createElement("input");
-  input.setAttribute("type", "button");
-  input.setAttribute("value", "Play?");
-  input.addEventListener("click", changeover)
-  simon.appendChild(input);
+  var h1 = document.createElement("h1");
+  h1.innerHTML="Click To Here To Start!";
+  h1.id = "playSimonSign";
+  clock.style.textShadow ="";
+  clock.style.color = "black";
+
+  simon.appendChild(h1);
+  h1.addEventListener("click", changeover);
+  clock.style.backgroundColor = "black";
+  createAudio();
 }
 function changeover(e){
   e.target.removeEventListener("click", changeover);
@@ -36,8 +51,20 @@ function changeover(e){
   computerTurn();
 }
 function updateTable(data){
-  tablebody.innerHTML = "";
+  scoreTable.innerHTML = "";
   var json = JSON.parse(data);
+  var thead = document.createElement("thead");
+  scoreTable.appendChild(thead);
+  var thr = document.createElement("tr");
+  var thnames = ["Rank", "Name", "Score"];
+  for (var j = 0; j < thnames.length; j++) {
+    var th = document.createElement("th");
+    th.innerHTML = thnames[j];
+    thr.appendChild(th);
+  }
+  thead.appendChild(thr);
+  var tbody = document.createElement("tbody");
+  tbody.id = "tablebody";
   for (var i = 0; i < 10; i++) {
 
       if(data.length === i){
@@ -55,6 +82,7 @@ function updateTable(data){
         td.innerHTML=json[i][key];
         tr.appendChild(td);
     }
-    tablebody.appendChild(tr);
+    tbody.appendChild(tr);
+    scoreTable.appendChild(tbody);
   }
 }

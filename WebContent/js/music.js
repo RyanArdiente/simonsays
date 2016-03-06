@@ -1,0 +1,50 @@
+function createAudio(){
+  var cont = document.getElementById("outerContainer");
+  var greenAudio = document.createElement("AUDIO");
+  greenAudio.src = "audio/green.wav";
+  greenAudio.loop = false;
+  greenAudio.id="greenaudio";
+  var redAudio = document.createElement("AUDIO");
+  redAudio.src= "audio/red.wav";
+  redAudio.loop = false;
+  redAudio.id="redaudio";
+  var blueAudio = document.createElement("AUDIO");
+  blueAudio.src = "audio/blue.wav";
+  blueAudio.loop= false;
+  blueAudio.id="blueaudio";
+  var yellowAudio = document.createElement("AUDIO");
+  yellowAudio.src="audio/yellow.wav";
+  yellowAudio.loop=false;
+  yellowAudio.id="yellowaudio";
+  var loseAudio = document.createElement("AUDIO");
+  loseAudio.src="audio/wrongGuess.wav";
+  loseAudio.loop=false;
+  loseAudio.id="loseaudio";
+  var timeoutAudio = document.createElement("AUDIO");
+  timeoutAudio.src="audio/timeout.wav";
+  timeoutAudio.loop=false;
+  timeoutAudio.id="timeoutaudio";
+  var timequarterAudio = document.createElement("AUDIO");
+  timequarterAudio.src="audio/timequarter.wav";
+  timequarterAudio.loop=false;
+  timequarterAudio.id="timequarteraudio";
+  var timestartAudio = document.createElement("AUDIO");
+  timestartAudio.src="audio/timestart.wav";
+  timestartAudio.loop=false;
+  timestartAudio.id="timestartaudio";
+  var timethreequarterAudio = document.createElement("AUDIO");
+  timethreequarterAudio.src="audio/timethreequarter.wav";
+  timethreequarterAudio.loop=false;
+  timethreequarterAudio.id="timethreequarteraudio";
+
+  cont.appendChild(greenAudio);
+  cont.appendChild(redAudio);
+  cont.appendChild(blueAudio);
+  cont.appendChild(yellowAudio);
+  cont.appendChild(loseAudio);
+  cont.appendChild(timeoutAudio);
+  cont.appendChild(timestartAudio);
+  cont.appendChild(timequarterAudio);
+  cont.appendChild(timethreequarterAudio);
+
+}

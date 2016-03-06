@@ -1,42 +1,47 @@
-var time = 60;
-var timerId= "";
-var minute = 60000;
-var second = 10;
-var keys = [];
-var computerSequence= [];
-var playerSequence= [];
-var moveInterval = "";
-var movetimer = 0;
-var totalScore = 0;
-var defScore = 100;
-var roundnum = 0;
-window.onload = function(){
-
-
-  play();
-  xhrTool("GET", "rest/getAllScores",updateTable);
-}
-function start(){
-  button.removeEventListener("click", start);
-  button.value ="Stop Timer";
-  button.addEventListener("click", restart);
+function startClock(){
+  timestartaudio.load();
+  timestartaudio.play();
   hourId = setInterval(function(){
     if(time == 0){
-      seconds.innerHTML = "60";
-      time = 60;
+      clearInterval(hourId);
+
     }
     seconds.innerHTML = --time;
   }, 1000);
+  clockCheck();
+}
+function clockCheck(bool){
+  var checkid = setInterval(function(){
+    if(bool){
+      clearInterval(checkid);
+    }
+    if(time == 45 || time == 30){
+      timethreequarteraudio.load();
+      timethreequarteraudio.play();
+    }else if(time == 15)
+    {
+      timequarteraudio.load();
+      timequarteraudio.play();
+    }
+    else if(time == 0){
+      clearInterval(checkid);
+      off();
+      timeoutaudio.load();
+      timeoutaudio.play();
+      window.alert("Time has expired");
+      stopClock();
+      restartClock();
+      resetGameState();
 
+      play();
+    }
+  }, 1000);
 }
-function restart(){
+function stopClock(){
   clearInterval(hourId);
-  button.removeEventListener("click", restart);
-  button.value = "Start/Resume";
-  button.addEventListener("click", start);
+  clockCheck(true);
 }
-function reset(){
-  time = 0;
-  seconds.innerHTML= "0";
-  minutes.innerHTML = "0";
+function restartClock(){
+  time = 60;
+  seconds.innerHTML= "60";
 }

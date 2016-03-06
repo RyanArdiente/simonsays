@@ -1,18 +1,50 @@
+body{
+  background-color: black;
+}
+#simonsign{
+  text-align: center;
+  font: normal 48px/normal "Warnes", Helvetica, sans-serif;
+  margin-top: 2%;
+  color: white;
+}
+.signClass {
+  margin: 0 0.23%;
+}
+#playSimonSign{
+  text-shadow: 0 0 10px rgba(180,180,180,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #f2f7f7 , 0 0 70px #ffffff , 0 0 80px #ffffff , 0 0 100px #8c8c8c ;
+}
+#signS{
+text-shadow: 0 0 10px rgba(255,255,255,1) , -2px 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px rgba(255,0,0,1) , -2px 0 70px rgba(255,0,0,1) , 0 0 80px rgba(255,0,0,1) , 0 0 100px rgba(255,0,0,1) ;}
+#signI{
+text-shadow: 0 0 10px rgba(255,255,255,1) , -2px 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #0cb20c , -2px 0 70px #0cb20c , 0 0 80px #0cb20c , 0 0 100px #0cb20c ;
+}
+#signM{
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #f2f7f7 , 0 0 70px #ffffff , 0 0 80px #ffffff , 0 0 100px #ffffff ;
+}
+#signO{
+text-shadow: 0 0 10px rgba(255,255,255,1) , -2px 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #0000ff , -2px 0 70px #0000ff , 0 0 80px #0000ff , 0 0 100px #0000ff ;
+}
+#signN{
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px rgba(255,255,0,1) , 0 0 70px rgba(255,255,0,1) , 0 0 80px rgba(247,247,121,1) , 0 0 100px rgba(255,255,170,1) ;
+}
+#playSimonSign{
+  color: white;
+}
 #outerContainer{
+  background-color: black;
   width: 75em;
   height: 50em;
   margin: 0 auto;
   display: flex;
 }
 #container2{
-  background-color: orange;
   height: 37.5em;
   width: 50em;
   display: inline-flex;
   /*margin: 0 auto;*/
 }
 #container3{
-  background-color: lightblue;
+
   height: 12.5em;
   width: 50em;
   display: inline-block;
@@ -25,8 +57,6 @@
   width: 45em;
   margin: 0 auto;
   margin-top: 1.25em;
-
-  background-color: purple;
   display: inline-block;
   float:right;
   z-index: 1;
@@ -35,8 +65,9 @@
   font-size: 2em;
   height: 25em;
   width:  12.5em;
-  background-color: black;
+
   color: white;
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
 
 }
 #scoreTable{
@@ -47,19 +78,19 @@
   float:left;
   z-index: 1;
   text-align: center;
-
 }
 #scoreBoard{
-  background-color: pink;
   height: 12.5em;
   width: 50em;
   margin: 0 auto;
-font-size: 1em;
+  font-size: 1em;
+  text-decoration-style:dotted;
 
 }
 
 #simon{
-
+  height: 35em;
+width: 45em;
 }
 .redOn{
   background-color: #ff0000;
@@ -87,8 +118,8 @@ font-size: 1em;
 }
 #red {
 
-    height: 15em;
-    width: 45.65%;
+    height: 45%;
+    width: 45%;
     border-top-right-radius: 100%;
     float: right;
     /*position: relative;
@@ -102,8 +133,8 @@ font-size: 1em;
   left:26.5%;*/
 
   float: left;
-  height: 15em;
-  width: 45.65%;
+  height: 45%;
+  width: 45%;
   border-bottom-left-radius: 100%;
   border: 1em solid black;
 
@@ -115,8 +146,8 @@ font-size: 1em;
   top: 10%;*/
   float: right;
 
-  height: 15em;
-  width: 45.65%;
+  height: 45%;
+  width: 45%;
   border-bottom-right-radius: 100%;
   border: 1em solid black;
 
@@ -127,8 +158,8 @@ font-size: 1em;
   bottom: 83%;
   left:26.5%;*/
   float: left;
-  height: 15em;
-  width: 45.65%;
+  height: 45%;
+  width: 45%;
   border-top-left-radius: 100%;
   border: 1em solid black;
 
@@ -136,31 +167,35 @@ font-size: 1em;
 }
 #clock{
   font-size: 1em;
-
-  width: 50%;
+    width: 50%;
   height: 50%;
-  background-color: white;
   text-align: center;
   font-size: 1.5em;
   font-family: Impact, Charcoal, sans-serif;
-  display: inline-flex;;
+  display: inline-flex;
+  margin-left: 25%;
+  margin-top: 6%;
+
 }
 #Score{
   display: inline-block;
-  margin: 0 auto;
+
   width: 45%;
   height: 20px;
+  margin-top: 20%;
 }
 #Seconds{
   display: inline-block;
   margin: 0 auto;
-width: 45%;
+  width: 45%;
   height: 20px;
+  margin-top: 20%;
 
 }
 #Round{
-
+  margin-top: 20%;
 }
+
 #button{
   width: 50%
 }

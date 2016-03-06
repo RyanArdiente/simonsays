@@ -1,4 +1,20 @@
-
+var time = 60;
+var timerId= "";
+var minute = 60000;
+var second = 10;
+var keys = [];
+var computerSequence= [];
+var playerSequence= [];
+var moveInterval = "";
+var movetimer = 0;
+var totalScore = 0;
+var defScore = 100;
+var roundnum = 0;
+var hourId= "";
+window.onload = function(){
+  play();
+  xhrTool("GET", "rest/getAllScores",updateTable);
+}
   var keysPressed = function(e) {
      // store an entry for every key pressed
      keys[e.keyCode] = true;
@@ -6,19 +22,23 @@
      if(keys[q] && ! keys[w] &&! keys[a] &&! keys[s])
      {
        green.setAttribute("class","greenOn");
-
+       greenaudio.load();
+       greenaudio.play();
      }
      if (! keys[q] &&  keys[w] && ! keys[a] && ! keys[s]) {
        red.setAttribute("class","redOn");
-
+       redaudio.load();
+       redaudio.play();
      }
      if (! keys[q] && ! keys[w] &&! keys[a] && keys[s]) {
        blue.setAttribute("class","blueOn");
-
+       blueaudio.load();
+       blueaudio.play();
      }
      if (! keys[q] && ! keys[w] && keys[a] &&! keys[s]) {
        yellow.setAttribute("class","yellowOn");
-
+       yellowaudio.load();
+       yellowaudio.play();
      }
    }
      function keysReleased(e) {
@@ -39,15 +59,4 @@
        }
          keys[e.keyCode] = false;
          conditionCheck();
-     }
-     function off(){
-
-                 green.setAttribute("class","greenOff");
-
-                 red.setAttribute("class","redOff");
-
-                 blue.setAttribute("class","blueOff");
-
-                 yellow.setAttribute("class","yellowOff");
-
      }

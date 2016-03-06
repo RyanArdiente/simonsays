@@ -1,5 +1,6 @@
 package rest.controller;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,9 @@ public class simonController
 	@RequestMapping(path="getAllScores", method=RequestMethod.GET)
 	public List<Score> getAllScores()
 	{
-		return ssdao.getAllScores();
+		List<Score> list = ssdao.getAllScores();
+		Collections.sort(list, new Score());
+		return list;
 	}
 	@ResponseBody
 	@RequestMapping(path="createScore", method=RequestMethod.PUT)
