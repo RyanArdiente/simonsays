@@ -35,7 +35,7 @@ function off(){
 function play(){
   simon.innerHTML="";
   var h1 = document.createElement("h1");
-  h1.innerHTML="Click To Here To Start!";
+  h1.innerHTML="Click To Here To Start!<br> Q = Green | W = Red <br> A = Yellow | S = Blue";
   h1.id = "playSimonSign";
   clock.style.textShadow ="";
   clock.style.color = "black";

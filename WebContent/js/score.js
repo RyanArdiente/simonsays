@@ -1,6 +1,6 @@
 var xhrTool = function(method,url, callback, object){
 var xhr = new XMLHttpRequest();
-xhr.open(method, "http://localhost:8080/SimonSays/"+url);
+xhr.open(method, url);
 xhr.onreadystatechange = function(){
   if(xhr.readyState == 4 && xhr.status < 400)
   {

@@ -94,24 +94,31 @@ width: 45em;
 }
 .redOn{
   background-color: #ff0000;
+  -webkit-box-shadow: 0 0 1px 0 rgba(0,0,0,0.5) , 0 0 2px 1px rgba(255,0,0,1) , 0 0 2px 2px rgba(255,0,0,1) , 0 0 6px 2px rgba(255,0,0,1) , 0 0 16px 4px rgba(255,0,0,1) ;
+box-shadow: 0 0 1px 0 rgba(0,0,0,0.5) , 0 0 2px 1px rgba(255,0,0,1) , 0 0 2px 2px rgba(255,0,0,1) , 0 0 6px 2px rgba(255,0,0,1) , 0 0 16px 4px rgba(255,0,0,1) ;
 }
 .redOff{
   background-color: #4d0000;
 }
 .blueOn{
   background-color: #00ffff;
+  -webkit-box-shadow: 0 0 1px 0 rgba(0,0,0,0.5) , 0 0 2px 1px rgba(0,0,255,1) , 0 0 2px 2px rgba(0,0,255,1) , 0 0 6px 2px rgba(0,0,255,1) , 0 0 16px 4px rgba(0,0,255,1) ;
+box-shadow: 0 0 1px 0 rgba(0,0,0,0.5) , 0 0 2px 1px rgba(0,0,255,1) , 0 0 2px 2px rgba(0,0,255,1) , 0 0 6px 2px rgba(0,0,255,1) , 0 0 16px 4px rgba(0,0,255,1) ;
 }
 .blueOff{
   background-color: #00004d;
 }
 .greenOn{
   background-color: #80ff00;
-}
+  -webkit-box-shadow: 0 0 1px 0 rgba(0,0,0,0.5) , 0 0 2px 1px rgba(0,255,0,1) , 0 0 2px 2px rgba(0,255,0,1) , 0 0 6px 2px rgba(0,255,0,1) , 0 0 16px 4px rgba(0,255,0,1) ;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.5) , 0 0 2px 1px rgba(0,255,0,1) , 0 0 2px 2px rgba(0,255,0,1) , 0 0 6px 2px rgba(0,255,0,1) , 0 0 16px 4px rgba(0,255,0,1) ;}
 .greenOff{
     background-color: #0f3d0f;
 }
 .yellowOn{
   background-color: #ffff00;
+  -webkit-box-shadow: 0 0 1px 0 rgba(0,0,0,0.5) , 0 0 2px 1px rgba(255,255,0,1) , 0 0 2px 2px rgba(255,255,0,1) , 0 0 6px 2px rgba(255,255,0,1) , 0 0 16px 4px rgba(255,255,0,1) ;
+box-shadow: 0 0 1px 0 rgba(0,0,0,0.5) , 0 0 2px 1px rgba(255,255,0,1) , 0 0 2px 2px rgba(255,255,0,1) , 0 0 6px 2px rgba(255,255,0,1) , 0 0 16px 4px rgba(255,255,0,1) ;
 }
 .yellowOff{
   background-color: #4d4d00;
@@ -119,13 +126,13 @@ width: 45em;
 #red {
 
     height: 45%;
-    width: 45%;
+    width: 47.75%;
     border-top-right-radius: 100%;
     float: right;
     /*position: relative;
     left: 62%;
     top: 10%;*/
-    border: 1em solid black;
+    border: .50em solid black;
 }
 #yellow {
   /*position: relative;
@@ -134,9 +141,10 @@ width: 45em;
 
   float: left;
   height: 45%;
-  width: 45%;
+  width: 47.75%;
   border-bottom-left-radius: 100%;
-  border: 1em solid black;
+  border: .5em solid black;
+  margin-top: .5em;
 
 }
 #blue {
@@ -147,9 +155,11 @@ width: 45em;
   float: right;
 
   height: 45%;
-  width: 45%;
+  width: 47.75%;
   border-bottom-right-radius: 100%;
-  border: 1em solid black;
+  border: .5em solid black;
+  margin-top: .5em;
+
 
 }
 #green {
@@ -159,11 +169,9 @@ width: 45em;
   left:26.5%;*/
   float: left;
   height: 45%;
-  width: 45%;
+  width: 47.75%;
   border-top-left-radius: 100%;
-  border: 1em solid black;
-
-
+  border: .5em solid black;
 }
 #clock{
   font-size: 1em;

@@ -79,8 +79,10 @@ function conditionCheck(){
     gameLost = true;
   }
   if(gameLost === true){
-    resetGameState();
+    
+    console.log(round.innerHTML);
     if(round.innerHTML > 5){
+
       var playerName = prompt("You Lost! Score: " + score.innerHTML +  " Round: " + round.innerHTML + ". Please enter your initials.").toUpperCase();
       if(playerName == null){
         playerName = "RCA";
