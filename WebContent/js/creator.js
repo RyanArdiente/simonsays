@@ -32,10 +32,19 @@ function off(){
 
 }
 
-function play(){
+function play(gameloss, finalScoreObject){
   simon.innerHTML="";
   var h1 = document.createElement("h1");
-  h1.innerHTML="Click To Here To Start!<br> Q = Green | W = Red <br> A = Yellow | S = Blue";
+  if(gameloss){
+    h1.innerHTML+=gameloss+"</br>";
+    if(finalScoreObject.score){
+      simon.innerHTML+="<input type=\"text\" maxlength=\"3\" id=\"initials\"><input type=\"button\" value=\"Submit\" id=\"initalsubmit\">";
+      initalsubmit.addEventListener("click",submitscore);
+
+
+    }
+  }
+  h1.innerHTML+="Click To Here To Start!<br> Q = Green | W = Red <br> A = Yellow | S = Blue";
   h1.id = "playSimonSign";
   clock.style.textShadow ="";
   clock.style.color = "black";
@@ -49,6 +58,12 @@ function changeover(e){
   e.target.removeEventListener("click", changeover);
   createGameBoard();
   computerTurn();
+}
+var submitscore = function(){
+  finalScoreObject.name = initials.value || "ANO";
+  initalsubmit.removeEventListener("click", submitscore);
+
+    xhrTool("PUT", "rest/createScore", updateTable, finalScoreObject);
 }
 function updateTable(data){
   scoreTable.innerHTML = "";

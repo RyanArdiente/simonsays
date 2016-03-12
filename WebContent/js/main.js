@@ -11,6 +11,7 @@ var totalScore = 0;
 var defScore = 100;
 var roundnum = 0;
 var hourId= "";
+var finalScoreObject = {};
 window.onload = function(){
   play();
   xhrTool("GET", "rest/getAllScores",updateTable);

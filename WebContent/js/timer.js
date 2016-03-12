@@ -28,12 +28,17 @@ function clockCheck(bool){
       off();
       timeoutaudio.load();
       timeoutaudio.play();
-      window.alert("Time has expired");
+
+      finalScoreObject.score = "";
+      finalScoreObject.name="";
+      if(round.innerHTML > 5){
+          finalScoreObject.score = score.innerHTML;
+      }
+
+      play("Time has expired Play Again!", finalScoreObject);
       stopClock();
       restartClock();
       resetGameState();
-
-      play();
     }
   }, 1000);
 }

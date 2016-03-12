@@ -79,30 +79,31 @@ function conditionCheck(){
     gameLost = true;
   }
   if(gameLost === true){
-    
-    console.log(round.innerHTML);
-    if(round.innerHTML > 5){
+    finalScoreObject.score="";
+    finalScoreObject.name="";
+    var lossmessage = "";
 
-      var playerName = prompt("You Lost! Score: " + score.innerHTML +  " Round: " + round.innerHTML + ". Please enter your initials.").toUpperCase();
-      if(playerName == null){
-        playerName = "RCA";
-      }
+    if(round.innerHTML > 5){
+      finalScoreObject.score = score.innerHTML;
       loseaudio.load();
       loseaudio.play();
-      var newScore = new scoreObject(score.innerHTML, playerName.substring(0,3));
-      xhrTool("PUT", "rest/createScore", updateTable, newScore);
+
+      lossmessage = "Game Over Enter Your Initials";
+      stopClock();
+      restartClock();
+      resetGameState();
     }
     else{
       loseaudio.load();
       loseaudio.play();
-      alert("You Lost! Please Play Again.");
+      lossmessage = "Game Over Play Again!";
 
     }
     stopClock();
     restartClock();
     resetGameState();
 
-    play();
+    play(lossmessage, finalScoreObject);
   }
 }
 function resetGameState(){
