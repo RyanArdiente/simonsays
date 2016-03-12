@@ -12,6 +12,15 @@ var defScore = 100;
 var roundnum = 0;
 var hourId= "";
 var finalScoreObject = {};
+var loseaudio = document.getElementById("loseaudio");
+var greenaudio = document.getElementById("greenaudio");
+var redaudio = document.getElementById("redaudio");
+var yellowaudio = document.getElementById("yellowaudio");
+var blueaudio = document.getElementById("blueaudio");
+var timoutaudio = document.getElementById("timoutaudio");
+var timequarteraudio = document.getElementById("timequarteraudio");
+var timestartaudio = document.getElementById("timestartaudio");
+var timetreequarteraudio = document.getElementById("timetreequarteraudio");
 window.onload = function(){
   play();
   xhrTool("GET", "rest/getAllScores",updateTable);
